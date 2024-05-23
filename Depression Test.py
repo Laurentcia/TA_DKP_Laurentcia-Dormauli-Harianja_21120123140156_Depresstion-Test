@@ -145,12 +145,12 @@ class DepressionTestApp:
         for widget in self.page1.winfo_children():
             widget.destroy()
 
-        self.name_label = tk.Label(self.page1, text="Name:",bg='#FF3366', fg="white")
+        self.name_label = tk.Label(self.page1, text="Name:",bg='#FF3366')
         self.name_label.pack()
         self.name_entry = tk.Entry(self.page1, textvariable=self.name)
         self.name_entry.pack()
 
-        self.age_label = tk.Label(self.page1, text="Age:",bg='#FF3366', fg="white")
+        self.age_label = tk.Label(self.page1, text="Age:",bg='#FF3366')
         self.age_label.pack()
         self.age_entry = tk.Entry(self.page1, textvariable=self.age)
         self.age_entry.pack()
