@@ -6,7 +6,7 @@ class DepressionTestApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Depression Test")
-        self.root.geometry("500x500")
+        self.root.geometry("700x720")
         self.input_page = InputPage(self.root, self)
         self.question_page = QuestionPage(self.root, self)
         self.result_page = ResultPage(self.root, self)
@@ -238,7 +238,6 @@ class ResultPage:
         image = Image.open("depression_test_image.jpg")
         image = image.resize((1000, 500), resample=Image.LANCZOS)
         photo = ImageTk.PhotoImage(image)
-
         label = tk.Label(self.frame, image=photo)
         label.image = photo
         label.pack()
@@ -247,8 +246,8 @@ class ResultPage:
         self.diagnosis_label = tk.Label(self.frame, text="", wraplength=1500, bg="#f8f7f2")
         self.diagnosis_label.pack(pady=10)
 
-        self.next_button = tk.Button(self.frame, text="Next", command=self.show_input, bg="#f8f7f2")
-        self.next_button.pack(pady=10)
+        self.finish_button = tk.Button(self.frame, text="Finish", command=self.show_input, bg="#f8f7f2")
+        self.finish_button.pack(pady=10)
 
     def reset(self):
         self.score = 0
